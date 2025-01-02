@@ -1,0 +1,208 @@
+.grid-news {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 24px 0px;
+  &-item {
+    .block {
+      padding: 24px 24px 60px;
+      background: #f2f4f7;
+      border-radius: 20px;
+      .thumb-res {
+        border-radius: 15px;
+        img {
+          border-radius: 15px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .info {
+        .sub-info {
+          display: flex;
+          align-items: center;
+          margin-bottom: 6px;
+          .tag {
+            display: inline-block;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: #667085;
+          }
+          .datetime {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.875rem;
+            color: #667085;
+            margin-left: 0.75rem;
+            &::before {
+              content: "";
+              opacity: 0.75;
+              background: #667085;
+              width: 70px;
+              height: 1px;
+              margin-right: 0.75rem;
+            }
+          }
+        }
+        .tt {
+          --tt: 1.0625rem;
+          font-family: $f-secondary;
+          @include ellips(2);
+          margin-bottom: 12px;
+        }
+        .desc {
+          font-size: 0.9735rem;
+          font-family: $f-secondary;
+          color: #667085;
+          @include ellips(3);
+        }
+        .link-more {
+          position: absolute;
+          bottom: 24px;
+          left: 24px;
+          font-size: 0.875rem;
+          color: $primary;
+          > span {
+            position: relative;
+            display: flex;
+            align-items: center;
+            #{$fa-all} {
+              font-weight: 400;
+              margin-left: 0.5rem;
+              transition: all 250ms ease 0s;
+            }
+            &::before {
+              content: "\f178";
+              font-family: "Font Awesome 6 Pro";
+              font-weight: 400;
+              pointer-events: none;
+              opacity: 0;
+              margin-left: -12px;
+              transition: all 250ms ease 0s;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+              right: 0;
+              height: 1px;
+              background: $primary;
+              transition: all 250ms ease 0s;
+            }
+          }
+        }
+      }
+    }
+    &:first-child {
+      .block {
+        padding: 0 0 40px;
+        background: transparent;
+        .info {
+          .link-more {
+            bottom: 8px;
+            left: 0;
+          }
+          .tt {
+            --tt: 1.25rem;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .grid-news {
+    &-item {
+      &:first-child {
+        .block {
+          padding: 0;
+          display: flex;
+          align-items: center;
+          .thumb-res {
+            --thumb-res-wide: 42%;
+            width: 50%;
+            flex: 0 0 auto;
+            margin-right: 1.25rem;
+            margin-bottom: 0;
+          }
+          .info {
+            position: relative;
+            padding-bottom: 52px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .grid-news {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px 18px;
+    &-item {
+      .block {
+        transition: all 250ms ease 0s;
+        .info {
+          .tt {
+            --tt: 1.125rem;
+          }
+        }
+        &:hover {
+          box-shadow: 0px 4px 12px rgba(#000, 0.1);
+          .thumb-res {
+            img {
+              transform: scale3d(1.1, 1.1, 1.05);
+              transition-duration: 0.75s;
+            }
+          }
+          .info {
+            .tt {
+              > span {
+                color: $primary;
+              }
+            }
+            .link-more {
+              #{$fa-all} {
+                margin-left: 0;
+                margin-right: -12px;
+                opacity: 0;
+              }
+              > span {
+                &::before {
+                  margin-left: 0;
+                  opacity: 1;
+                  margin-right: 0.5rem;
+                }
+                &::after {
+                  left: auto;
+                  width: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:first-child {
+        grid-column: 1 / span 3;
+        .block {
+          .thumb-res {
+            width: 58%;
+            --thumb-res-wide: 38%;
+            margin-right: 2rem;
+          }
+          .info {
+            .tt {
+              --tt: 1.75rem;
+            }
+            .link-more {
+              font-size: 1.0625rem;
+            }
+          }
+          &:hover {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}

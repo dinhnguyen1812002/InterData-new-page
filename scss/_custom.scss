@@ -1,0 +1,184 @@
+$container-3xl: 1440px;
+$font-family: "Inter", sans-serif;
+$f-primary: "Inter", sans-serif;
+$f-secondary: "Poppins", sans-serif;
+$font-tt: $font-family;
+$font-size: 1rem;
+$line-height: 1.65;
+$line-height-desc: 1.5;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$body-bg: #fff;
+$color-body: #1d2939;
+$border-radius: 6px;
+// Color Site
+$primary: #0060f7;
+$dark-primary: darken($primary, 20%);
+$secondary: #ff5630;
+$dark-secondary: darken($secondary, 20%);
+$desc: #667085;
+$light-desc: #f2f2f2;
+$dark: #232330;
+$light: #f2f5f9;
+$gray: #bfbdc1;
+$danger: #ff4444;
+$dark-danger: #cc0000;
+$warning: #ffbb33;
+$dark-warning: #ff8800;
+$info: #33b5e5;
+$dark-info: #0099cc;
+$success: #00c851;
+$dark-success: #007e33;
+// Color Social
+$facebook: #4267b2;
+$instagram: #000;
+$linkedin: #0077b5;
+$snapchat: #fffc00;
+$whatapps: #25d366;
+$spotify: #1ed760;
+$skype: #00aff0;
+$dribbble: #ea4c89;
+$tiktok: #000000;
+$zalo: #0a68fe;
+$shopee: #fe5621;
+$lazada: #14116d;
+$youtube: #f00;
+$twitter: #000;
+$instagram: linear-gradient(
+  45deg,
+  #aa6317 0%,
+  #e6683c 25%,
+  #dc2743 50%,
+  #cc2366 75%,
+  #bc1888 100%
+);
+// Variables For Icon
+$fa-all: ".fa", ".far", ".fas", ".fab", ".bi", ".fa-solid", ".fa-regular",
+  ".fal", ".fa-light", ".fa-brand", ".fa-duotone", ".materials-icon", ".iconify",
+  ".fa-thin";
+$h-all: "h1", "h2", "h3", "h4", "h5", "h6";
+$tt-all: ".tt", ".tt-xs", ".tt-sm", ".tt-md", ".tt-lg", ".tt-xl", ".tt-xxl";
+$material-icons: 'class*="material-icons"';
+
+// Pagination
+$pagination-color: darken($primary, 10%);
+$pagination-border-width: 1px;
+$pagination-border-radius: $border-radius;
+$pagination-border-color: rgba($primary, 0.15);
+$pagination-focus-bg: #fff;
+$pagination-focus-box-shadow: none;
+$pagination-hover-bg: rgba($primary, 0.07);
+$pagination-hover-border-color: rgba($primary, 0.5);
+$pagination-margin-start: 5px;
+$pagination-disabled-color: rgba($primary, 0.6);
+$pagination-disabled-border-color: rgba($primary, 0.1);
+// $pagination-active-color:           $component-active-color;
+// $pagination-active-bg:              $component-active-bg;
+// $pagination-active-border-color:    $pagination-active-bg;
+
+$breadcrumb-font-size: 14px;
+$breadcrumb-padding-y: 10px;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-active-color: #fff;
+$breadcrumb-divider-color: #fff;
+//
+$table-cell-vertical-align: middle;
+$table-bg: #fff;
+// conatiner-gutter
+$grid-gutter-width: 2rem;
+
+// Components
+$accordion-button-active-bg: #fff;
+$accordion-button-focus-border-color: #fff;
+$accordion-button-focus-box-shadow: none !important;
+$accordion-padding-x: 0;
+$offcanvas-border-width: 0;
+$enable-negative-margins: true;
+
+$input-btn-padding-y: 0.5rem;
+$input-btn-focus-color-opacity: 0.15;
+$modal-md: 570px;
+
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+$custom-colors: (
+  "primary": $primary,
+  "dark-primary": darken($primary, 10%),
+  "dark": $dark,
+  "gray": $gray,
+  "lighter": #f3f4f8,
+  "phone": #0d47a1,
+  "desc": $desc,
+  "facebook": $facebook,
+  "youtube": $youtube,
+  "twitter": $twitter,
+  "pinterest": #e11151,
+  "envelope": darken($secondary, 20%),
+  "linkedin": $linkedin,
+  "instagram": #780cdf,
+  "facebook-messenger": #1d82ff,
+  "tiktok": $tiktok,
+  "whatsapp": $whatapps,
+  "spotify": $spotify,
+  "zalo": $zalo,
+);
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$list-all-colors: (
+  1: $primary,
+  2: $secondary,
+  3: $success,
+  4: $warning,
+  5: $info,
+  6: $dark,
+  7: map-get($custom-colors, "facebook"),
+  8: map-get($custom-colors, "youtube"),
+  9: map-get($custom-colors, "instagram"),
+  10: map-get($custom-colors, "twitter"),
+  11: map-get($custom-colors, "pinterest"),
+  12: map-get($custom-colors, "envelope"),
+  13: map-get($custom-colors, "linkedin"),
+  14: map-get($custom-colors, "phone"),
+);
+
+$btn-border-width: 1px;
+$btn-font-weight: 600;
+$btn-white-space: nowrap;
+$btn-border-radius: $border-radius;
+$btn-close-width: 14px;
+$btn-close-color: $body-color;
+$btn-padding-y: 0.5625rem;
+$btn-padding-x: 1.5rem;
+
+$min-contrast-ratio: 1.5;
+$btn-hover-bg-shade-amount: 15% - 6;
+$btn-hover-bg-tint-amount: 15% - 6;
+$btn-hover-border-shade-amount: 20% - 6;
+$btn-hover-border-tint-amount: 10% - 6;
+$btn-active-bg-shade-amount: 20% - 6;
+$btn-active-bg-tint-amount: 20% - 6;
+$btn-active-border-shade-amount: 25% - 6;
+$btn-active-border-tint-amount: 10% - 6;
+
+$line-height-base: 1.4;
+$spacers: (
+  0: 0,
+  1: calc($spacer / 4),
+  2: calc($spacer / 2),
+  3: $spacer,
+  4: $spacer * 1.5,
+  45: $spacer * 2,
+  5: $spacer * 3,
+  6: $spacer * 4,
+);
+$form-floating-padding-x: 0;
+$form-floating-padding-y: 1rem;
+$form-floating-input-padding-t: 1.5rem;
+$form-floating-input-padding-b: 0;
+$form-floating-label-opacity: 0.65;
+$form-floating-label-transform: scale(0.85) translateY(-0.5rem) translateX(0);
+
+$box-shadow: 0 0.5rem 1.25rem rgba($black, 0.085);

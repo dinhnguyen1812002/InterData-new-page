@@ -1,0 +1,51 @@
+.order-icon-list {
+  list-style: none;
+  padding: 0;
+  > li {
+    position: relative;
+    margin-bottom: 6px;
+  }
+  .icon {
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+}
+.list-style-angle {
+  &,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    position: relative;
+    padding-left: 0px;
+    margin-bottom: 6px;
+    &:before {
+      content: "";
+      font-family: "font awesome 6 pro";
+      @include absolute(5px, null, null, 2px);
+      line-height: 1;
+      opacity: 1;
+      font-weight: 700;
+      font-size: 12px;
+    }
+  }
+  a {
+    @include a-hover-underline(#fff);
+    margin-bottom: 6px;
+    color: inherit;
+    #{$fa-all} {
+      margin: 2px 8px 0 2px;
+      opacity: 0.8;
+    }
+  }
+}
+.list-column {
+  column-count: 2;
+  column-gap: 32px;
+  > li {
+    break-inside: avoid-column;
+  }
+}

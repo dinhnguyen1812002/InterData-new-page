@@ -1,0 +1,45 @@
+.list-icon-social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -0.5rem;
+  > a:not(:last-of-type) {
+    margin-right: 0.5rem;
+  }
+  > a {
+    margin-top: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff !important;
+    border-radius: 50%;
+    padding: 0;
+    @extend %flex-center;
+    width: var(--btn-circle, 40px);
+    height: var(--btn-circle, 40px);
+    &.btn-zalo {
+      font-size: 22px;
+    }
+  }
+  .bi {
+    line-height: 1;
+  }
+  &.rounded-0 {
+    > a {
+      border-radius: 0;
+      margin-right: 0;
+    }
+  }
+  &.rounded-2 {
+    > a {
+      border-radius: 5px;
+    }
+  }
+}
+.btn-zalo {
+  background-color: #2178f3;
+}
+.icon-zalo-chat {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("skin/zalo-chat.svg");
+}

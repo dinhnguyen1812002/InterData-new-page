@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import "custom";
+
+@import "../bootstrap/bootstrap";
+@import url("https://cdn.bizmac.io/vendors/bootstrap/bootstrap-icons.css");
+@import url("https://cdn.bizmac.io/vendors/fonts/Awesome/all.min.css");
+
+@import "mixin";
+
+@import "plugins/fancybox/fancybox";
+@import "plugins/swiper/swiper";
+@import "plugins/parsley/parsley";
+
+@import "core/fonts";
+@import "core/reset";
+@import "core/title";
+@import "core/buttons";
+@import "core/table";
+@import "core/block";
+@import "core/list";
+
+@import "core/animation";
+@import "core/block-sidebar-stick";
+@import "core/dd-hover";
+
+@import "layout/form";
+@import "layout/header";
+// Ver 1
+@import "layout/menu";
+@import "layout/footer";
+@import "layout/social";
+@import "layout/banner-all";
+@import "layout/404";
+@import "layout/pagination";
+
+@import "page/_index";
+@import "page/_about";
+@import "page/_news";

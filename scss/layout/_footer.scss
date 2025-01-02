@@ -1,0 +1,233 @@
+.p-icon,
+.picon {
+  margin-bottom: 10px;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 26px;
+  #{$fa-all} {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    opacity: 0.7;
+  }
+  a {
+    color: inherit;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// Footer
+.footer {
+  background-color: rgba(#f2f4f7, 1);
+  color: $color-body;
+  font-size: 15px;
+  position: relative;
+  &:before {
+    content: "";
+    @include absolute(0px, 0, 0, 0);
+    background: url("skin/theme/bg-footer.png") no-repeat center bottom;
+    background-size: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+  &:after {
+    content: "";
+    @include absolute(255px, 0, 0, 0);
+    background: url("skin/theme/bg-footer-1.png") no-repeat center top;
+    background-size: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .container,
+  .container-fluid,
+  .copyr {
+    position: relative;
+    z-index: 2;
+  }
+  .logo {
+    --logo-width: 190px;
+    margin: 0;
+    &-full {
+      display: block !important;
+      background: transparent !important;
+      margin-bottom: 24px;
+    }
+  }
+  .desc {
+    color: rgba(#f4f4f4, 0.7);
+    margin-bottom: 24px;
+  }
+  .list-icon-social {
+    > a {
+      --btn-circle: 32px;
+      border: 1px solid #ffff;
+      background: transparent;
+      box-shadow: 0px 0.8px 1.6px 0px rgba(16, 24, 40, 0.05);
+      &.btn-zalo {
+        font-size: 20px;
+        &:hover {
+          background: $zalo;
+          border-color: $zalo;
+          box-shadow: 0px 0px 12px rgba($zalo, 0.5),
+            0px 0px 24px rgba($zalo, 0.25);
+        }
+      }
+      &.btn-facebook {
+        &:hover {
+          background: $facebook;
+          border-color: $facebook;
+          box-shadow: 0px 0px 12px rgba($facebook, 0.5),
+            0px 0px 24px rgba($facebook, 0.25);
+        }
+      }
+      &.btn-twitter {
+        &:hover {
+          background: $twitter;
+          border-color: $twitter;
+          box-shadow: 0px 0px 12px rgba($twitter, 0.5),
+            0px 0px 24px rgba($twitter, 0.25);
+        }
+      }
+    }
+  }
+  &-tt {
+    color: #0060f7;
+    margin-bottom: 12px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-family: $f-secondary;
+    font-weight: 500;
+    &:after {
+      content: "";
+      flex: 1 0 auto;
+      display: block;
+      width: 44px;
+      height: 2px;
+      margin-left: 0.5rem;
+      border-radius: 3px;
+      background: linear-gradient(270deg, #00a2ef 0%, #0060f7 100%);
+    }
+  }
+  &-col {
+    margin-top: 42px;
+  }
+  a:not(.btn) {
+    text-decoration: none;
+    color: inherit;
+    @include a-hover-underline(#0060f7);
+  }
+  .picon,
+  .p-icon {
+    &.address {
+      align-items: flex-start;
+    }
+    #{$fa-all} {
+      opacity: 1;
+    }
+    .form-group {
+      .form {
+        + .form {
+          margin-top: 0.5rem;
+        }
+        .label {
+          font-size: 0.875rem;
+          margin-bottom: 0.25rem;
+          color: rgba($color-body, 0.5);
+        }
+      }
+    }
+  }
+  .list-cerfication {
+    display: flex;
+    align-items: center;
+    margin-top: -0.5rem;
+    a {
+      display: inline-block;
+      max-width: 100px;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+      background: none !important;
+      img {
+        max-height: 100%;
+        margin: auto;
+      }
+    }
+  }
+  .copy,
+  .copyr {
+    padding: 0.75rem 0;
+    position: relative;
+    color: #667085;
+    margin-top: 3rem;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 162, 239, 0) 0%,
+        rgba(0, 96, 247, 0.4) 50%,
+        rgba(0, 162, 239, 0) 100%
+      );
+    }
+    .col-left {
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .footer {
+    &::before,
+    &:after {
+      background-size: auto;
+    }
+    &::before {
+      background-position-x: left;
+    }
+    &::after {
+      top: 169px;
+      background-position-x: right;
+    }
+    &-col {
+      margin-top: 60px;
+    }
+    &-logo {
+      margin-top: 60px;
+    }
+    .copy,
+    .copyr {
+      margin-top: 3rem;
+    }
+    &-tt {
+      margin-bottom: 16px;
+      &::after {
+        @include absolute(null, 0, -8px, 0);
+        margin-left: 0;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .footer {
+    .copy,
+    .copyr {
+      .col-left {
+        width: 70%;
+        max-width: 100%;
+      }
+      .col-right {
+        width: 30%;
+        max-width: 100%;
+      }
+    }
+  }
+}
