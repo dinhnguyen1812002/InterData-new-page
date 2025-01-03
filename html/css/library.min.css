@@ -24485,3 +24485,15 @@ html.menu-open {
   background: #0060f7;
   color: #fff;
 }
+@media (max-width: 992px) {
+  .swiper-slide .block {
+    align-items: center;
+    display: flow-root;
+  }
+  .thumb-res img {
+    margin: 0;
+  }
+  .feedbackdot{
+    visibility: hidden;
+  }
+}
