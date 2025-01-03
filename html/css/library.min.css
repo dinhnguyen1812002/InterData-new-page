@@ -19208,7 +19208,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 
 .feedback__slider .block .title .thumb img {
-    margin: 0
+    margin: 0;
+    width: 100px;
+    height: 100px;
 }
 
 .feedback__slider .block .info .desc {
@@ -22344,6 +22346,21 @@ table th {
     top: -200px;
     left: -200px
 }
+.hidden {
+  display: none;
+}
+.desc {
+  margin-bottom: 1rem;
+}
+.toggle-btn {
+  color: #004ec8;
+
+
+  cursor: pointer;
+}
+/* .toggle-btn:hover {
+  background-color: #0056b3;
+} */
 
 @media (min-width:992px) {
     .bg-partner .svg {
@@ -24418,85 +24435,11 @@ table th {
     opacity: 1;
     animation: glitchLine .4s steps(2, start) forwards
 }
-.swiper-slide .block-t {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
 
-.feedback__slider .swiper-slide .thumb-res {
-  flex-shrink: 0;
-  width: 500px;
-  height: 70px;
-  overflow: hidden;
-}
 
-.swiper-slide .thumb-res img {
-  /* width: 70%;
-  height: 70%; */
-  object-fit: cover;
-}
 
-.swiper-slide .info {
-  flex: 1;
-}
 
-.swiper-slide .author {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
 
-.swiper-slide .job {
-  font-style: italic;
-  color: gray;
-  margin-bottom: 10px;
-}
-
-.swiper-slide .desc p {
-  margin: 0;
-  line-height: 1.5;
-}
-.feedback__slider .feedback__navigation {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  pointer-events: none;
-  left: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-.feedback__slider .feedback__navigation .swiper-nav-button {
-  width: 40px;
-  height: 40px;
-  color: #1d2939;
-  background: #fff;
-  box-shadow: 0 2.5px 12.5px 0 rgba(0, 0, 0, 0.149);
-  border-radius: 50%;
-  transition: all 0.25s ease 0s;
-}
-.feedback__slider .feedback__navigation > * {
-  pointer-events: all;
-}
-.feedback__slider .feedback__navigation .swiper-nav-button:hover {
-  background: #0060f7;
-  color: #fff;
-}
-@media (max-width: 992px) {
-  .swiper-slide .block {
-    align-items: center;
-    display: flow-root;
-  }
-  .thumb-res img {
-    margin: 0;
-  }
-  .feedbackdot{
-    visibility: hidden;
-  }
-}
 
 @keyframes glitchLine {
     0% {
