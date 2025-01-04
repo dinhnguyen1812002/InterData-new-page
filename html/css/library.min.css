@@ -17726,7 +17726,7 @@ fieldset:disabled .btn {
     right: 0;
     bottom: 0;
     left: 0;
-    
+
 }
 
 .header-right .icon,
@@ -29456,11 +29456,10 @@ html.menu-open {
     }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 100px) and (max-width:1500px) {
     .slider-logo .thumb-res img {
         padding: 12px;
-        /* filter: brightness(0) saturate(100%) invert(31%) sepia(10%) saturate(1120%)
-      hue-rotate(177deg) brightness(97%) contrast(91%); */
+
     }
 }
 
@@ -29487,10 +29486,3 @@ html.menu-open {
     height: 22px;
     width: 119px
 }
-
-@media (max-width: 1200px) {
-    .slider-logo .thumb-res img {
-      padding: 12px;
-   
-    }
-  }
