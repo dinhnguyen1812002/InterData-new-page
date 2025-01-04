@@ -17709,6 +17709,10 @@ fieldset:disabled .btn {
     background-size: cover;
 }
 
+.thumb-news {
+    padding-bottom: var(--thumb-res-wide, 58%) !important;
+}
+
 .absolute,
 .banner-lg:after,
 .overlay-dark,
@@ -17722,6 +17726,7 @@ fieldset:disabled .btn {
     right: 0;
     bottom: 0;
     left: 0;
+    
 }
 
 .header-right .icon,
@@ -29476,4 +29481,9 @@ html.menu-open {
     text-align: center;
     color: #007bff;
 
+}
+
+.news-img {
+    height: 22px;
+    width: 119px
 }
