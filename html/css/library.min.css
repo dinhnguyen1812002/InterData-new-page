@@ -29487,3 +29487,10 @@ html.menu-open {
     height: 22px;
     width: 119px
 }
+
+@media (max-width: 1200px) {
+    .slider-logo .thumb-res img {
+      padding: 12px;
+   
+    }
+  }
