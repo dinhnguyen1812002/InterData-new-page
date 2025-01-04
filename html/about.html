@@ -15,6 +15,40 @@
     <link rel="shortcut icon" href="favicon.png" />
     <link href="css/library.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+ 
+        const descElements = document.querySelectorAll(".desc");
+
+        descElements.forEach((desc) => {
+          const content = desc.querySelector(".desc-content");
+          const button = desc.querySelector(".btn-read-more");
+
+          if (!content || !button) return;
+
+      
+          const contentHeight = content.scrollHeight;
+         
+          if (contentHeight > 120) {
+            desc.classList.add("truncated");
+            button.addEventListener("click", function () {
+              desc.classList.toggle("expanded");
+              if (desc.classList.contains("expanded")) {
+                button.textContent = "Thu gọn"; 
+              } else {
+                button.textContent = "Xem thêm"; 
+              }
+            });
+          } else if(contentHeight <= 120) {
+            button.style.display = "none";
+          }
+        
+         
+        }, 3000);
+      });
+    </script>
   </head>
   <body>
     <div class="wrapper home-page" id="home-page">
@@ -938,24 +972,28 @@
                     </div>
                     <div class="info">
                       <div class="desc">
-                        <p>
+                        <p class="desc-content">
                           Sau 1 thời gian trải nghiệm và đã sử dụng dịch vụ của
                           InterData thì Hưng đáng giá chất lượng dịch vụ khá là
-                          tốt.
-                        </p>
-                        <p>
+                          tốt.<br />
                           Hưng cũng dùng dịch vụ rất nhiều bên ở việt nam rồi
                           thì thấy dịch vụ không thua kém bất kể bên nào nhiều
                           khi còn nhỉnh hơn các bên. Hệ thống ổn định, đặc biệt
                           giá thành tốt hơn so với các bên trên thị trường.
-                        </p>
-                        <p>
+                          <br />
                           Mong muốn của Hưng cũng như tất cả khách hàng là
                           InterData sẽ duy trì sự ổn định bền vững ở hiện tại và
                           tương lai. Để web của khách hàng tập trung vào công
                           việc phát triển doanh nghiệp.
                         </p>
                       </div>
+                      <!-- <button
+                        class="btn-read-more"
+                        onclick="readmore(event)"
+                        style="display: none"
+                      >
+                        Xem thêm
+                      </button> -->
                       <div class="author">Lê Hưng</div>
                       <div class="job">SEO Việt</div>
                     </div>
@@ -973,21 +1011,17 @@
                     </div>
                     <div class="info">
                       <div class="desc">
-                        <p>
+                        <p class="desc-content">
                           Với tư cách là đơn vị sử dụng trực tiếp và cung cấp
                           dịch vụ website đến khách hàng Toàn quốc. Mình đã sử
                           dụng dịch vụ của các đơn vị cung cấp VPS, Hosting,
-                          Dedicate từ trong nước đến nước ngoài. Bên mình có
-                          kinh nghiệm trong việc tự vận hành Dedicate, VPS nên
-                          rất chú trọng vào việc lựa chọn nhà cung cấp dịch vụ
-                          lưu trữ.
-                        </p>
-                        <p>
+                          Dedicate từ trong nước đến nước ngoài.<br />
+                          Bên mình có kinh nghiệm trong việc tự vận hành
+                          Dedicate, VPS nên rất chú trọng vào việc lựa chọn nhà
+                          cung cấp dịch vụ lưu trữ.<br />
                           Được biết đến InterData là công ty chuyên sâu về giải
                           pháp liền mạch như phần cứng cao cấp, hỗ trợ
                           Anti-DDoS, độ trễ thấp và đường truyền kết nối mạnh.
-                        </p>
-                        <p>
                           Sau khi sử dụng dịch vụ VPS tại đây, mình rất ấn tượng
                           với cấu hình chuẩn chỉnh và giá trị thực tế của dịch
                           vụ. Vì thế mình đánh giá rất cao thái độ cầu thị của
@@ -995,6 +1029,13 @@
                           vụ.
                         </p>
                       </div>
+                      <!-- <button
+                        class="btn-read-more"
+                        onclick="readmore(event)"
+                        style="display: none"
+                      >
+                        Xem thêm
+                      </button> -->
                       <div class="author">Vĩnh Minh Đạo</div>
                       <div class="job">RealDev</div>
                     </div>
@@ -1012,17 +1053,22 @@
                     </div>
                     <div class="info">
                       <div class="desc">
-                        <p>
+                        <p class="desc-content">
                           Mình thấy khá hài lòng với dịch vụ Cloud AMD của
                           InterData. Website chạy ổn định, hiệu suất và các tính
-                          năng đều đáp ứng tốt nhu cầu của mình.
-                        </p>
-                        <p>
-                          Có lúc cũng gặp vài trục trặc nhỏ, nhưng đội ngũ kỹ
-                          thuật xử lý rất nhanh và nhiệt tình. Nhìn chung, dùng
-                          dịch vụ của InterData mình cảm thấy rất yên tâm.
+                          năng đều đáp ứng tốt nhu cầu của mình. <br />Có lúc
+                          cũng gặp vài trục trặc nhỏ, nhưng đội ngũ kỹ thuật xử
+                          lý rất nhanh và nhiệt tình. <br />hìn chung, dùng dịch
+                          vụ của InterData mình cảm thấy rất yên tâm.
                         </p>
                       </div>
+                      <!-- <button
+                        class="btn-read-more"
+                        onclick="readmore(event)"
+                        style="display: none"
+                      >
+                        Xem thêm
+                      </button> -->
                       <div class="author">Trịnh Bảo</div>
                       <div class="job">BALICO</div>
                     </div>
@@ -1040,14 +1086,21 @@
                     </div>
                     <div class="info">
                       <div class="desc">
-                        <p>
+                        <p class="desc-content">
                           Từ lúc chuyển qua dùng VPS của InterData, mình thấy
-                          website chạy mượt hơn hẳn, hiếm khi gặp lỗi. Đội ngũ
-                          hỗ trợ cũng rất chuyên nghiệp, lúc nào cần là phản hồi
-                          liền. Hiện tại thì mình hoàn toàn hài lòng với dịch vụ
-                          này.
+                          website chạy mượt hơn hẳn, hiếm khi gặp lỗi.<br />
+                          Đội ngũ hỗ trợ cũng rất chuyên nghiệp, lúc nào cần là
+                          phản hồi liền. Hiện tại thì mình hoàn toàn hài lòng
+                          với dịch vụ này.
                         </p>
                       </div>
+                      <!-- <button
+                        class="btn-read-more"
+                        onclick="readmore(event)"
+                        style="display: none"
+                      >
+                        Xem thêm
+                      </button> -->
                       <div class="author">Trường Phong</div>
                       <div class="job">
                         CÔNG TY TNHH GIẢI PHÁP CÔNG NGHỆ TRƯỜNG PHONG
@@ -1058,23 +1111,30 @@
                 <div class="swiper-slide">
                   <div class="block">
                     <div class="thumb-res kh wide">
-                      <img
+                      <!-- <img
                         src="css/skin/customer/logo-g"
                         alt="nguyen-cao-khanh-golden-town"
                         slug="nguyen-cao-khanh-golden-town"
                         title=" Nguyễn Cao Khánh Golden Town"
-                      />
+                      /> -->
                     </div>
                     <div class="info">
                       <div class="desc">
-                        <p>
+                        <p class="desc-content">
                           Mình dùng VPS bên InterData một thời gian rồi, thấy ổn
                           định với tốc độ xử lý nhanh phết. Bảo mật với hiệu
-                          suất cũng tốt nữa. Mà thích nhất là support nhiệt
-                          tình, lúc nào cũng túc trực 24/7, nhờ vậy mà mình đỡ
-                          lo khi chạy web.
+                          suất cũng tốt nữa. <br />Mà thích nhất là support
+                          nhiệt tình, lúc nào cũng túc trực 24/7, nhờ vậy mà
+                          mình đỡ lo khi chạy web.
                         </p>
                       </div>
+                      <!-- <button
+                        class="btn-read-more"
+                        onclick="readmore(event)"
+                        style="display: none"
+                      >
+                        Xem thêm
+                      </button> -->
                       <div class="author">Nguyễn Cao Khánh</div>
                       <div class="job">GOLDEN TOWN</div>
                     </div>
@@ -1092,13 +1152,21 @@
                     </div>
                     <div class="info">
                       <div class="desc">
-                        <p>
+                        <p class="desc-content">
                           Tôi đã chuyển website Umix sang chạy ở Interdata, điều
                           tôi hài lòng nhất chính là sự nhiệt tình cả các bạn,
                           hỗ trợ mọi vấn đề một cách nhanh chóng ngay cả lúc nửa
                           đêm.
                         </p>
                       </div>
+                      <!--           <button
+                        class="btn-read-more"
+                        onclick="readmore(event)"
+                        style="display: none"
+                      >
+                        Xem thêm
+                      </button> -->
+
                       <div class="author">Thắng Nguyễn</div>
                       <div class="job">UMIX VIỆT NAM</div>
                     </div>
@@ -1116,24 +1184,26 @@
                     </div>
                     <div class="info">
                       <div class="desc">
-                        <p>
+                        <p class="desc-content">
                           Bên mình là Agency về thiết kế web và Ads nên rất chú
                           trọng quan tâm về tính ổn định, bảo mật của VPS,
                           Hosting để đảm bảo chất lượng dịch vụ của bên anh với
-                          khách hàng.
-                        </p>
-                        <p>
-                          Từ khi dùng dịch vụ của InterData thì mình thấy hạ
-                          tầng bên InterData mạnh, với thường cập nhật các dòng
-                          cấu hình server mới, tốc độ kết nối nhanh và đội ngũ
-                          hỗ trợ nhiệt tình.
-                        </p>
-                        <p>
-                          Mình tin tưởng vào chất lượng dịch vụ của InterData sẽ
-                          luôn đảm bảo được tính ổn định và bảo mật cao, đáp ứng
-                          tốt nhu cầu cho các dự án của bên anh.
+                          khách hàng. Từ khi dùng dịch vụ của InterData thì mình
+                          thấy hạ tầng bên InterData mạnh, với thường cập nhật
+                          các dòng cấu hình server mới, tốc độ kết nối nhanh và
+                          đội ngũ hỗ trợ nhiệt tình. Mình tin tưởng vào chất
+                          lượng dịch vụ của InterData sẽ luôn đảm bảo được tính
+                          ổn định và bảo mật cao, đáp ứng tốt nhu cầu cho các dự
+                          án của bên anh.
                         </p>
                       </div>
+                      <!-- <button
+                        class="btn-read-more"
+                        onclick="readmore(event)"
+                        style="display: none"
+                      >
+                        Xem thêm
+                      </button> -->
                       <div class="author">Trần Mạnh Hùng</div>
                       <div class="job">DIGIZONE VIỆT NAM</div>
                     </div>
@@ -1151,13 +1221,20 @@
                     </div>
                     <div class="info">
                       <div class="desc">
-                        <p>
-                          Chất lượng dịch vụ rất tốt! Đội ngũ hỗ trợ mau chóng,
-                          phối hợp nhịp nhàng để hỗ trợ mấy ca khó! Linh hoạt xử
-                          lý mấy tình huống ngoài phạm vi trách nhiệm luôn. Rất
-                          tuyệt vời.
+                        <p class="desc-content">
+                          Chất lượng dịch vụ rất tốt! <br />Đội ngũ hỗ trợ mau
+                          chóng, phối hợp nhịp nhàng để hỗ trợ mấy ca khó! Linh
+                          hoạt xử lý mấy tình huống ngoài phạm vi trách nhiệm
+                          luôn. Rất tuyệt vời.
                         </p>
                       </div>
+                      <!-- <button
+                        class="btn-read-more"
+                        onclick="readmore(event)"
+                        style="display: none"
+                      >
+                        Xem thêm
+                      </button> -->
                       <div class="author">Đặng Hải Triều</div>
                       <div class="job">ĐỒNG HỒ HẢI TRIỀU</div>
                     </div>
@@ -1175,15 +1252,22 @@
                     </div>
                     <div class="info">
                       <div class="desc">
-                        <p>
+                        <p class="desc-content">
                           Tôi đang sử dụng nhiều VPS tại Interdata chạy hàng
                           nghìn trang web từ 2022 đến nay. Cảm nhận của tôi về
                           dịch vụ là rất tốt, website hoạt động ổn định, đội ngũ
-                          hỗ trợ kỹ thuật nhiệt tình và nhanh chóng. Tôi sẽ giới
-                          thiệu thêm cho bạn bè và đối tác của mình về dịch vụ
-                          của Interdata trong thời gian tới.
+                          hỗ trợ kỹ thuật nhiệt tình và nhanh chóng.<br />
+                          Tôi sẽ giới thiệu thêm cho bạn bè và đối tác của mình
+                          về dịch vụ của Interdata trong thời gian tới.
                         </p>
                       </div>
+                      <!-- <button
+                        class="btn-read-more"
+                        onclick="readmore(event)"
+                        style="display: none"
+                      >
+                        Xem thêm
+                      </button> -->
                       <div class="author">Tạ Quốc Khánh</div>
                       <div class="job">Công Ty Cổ Phần Jobke</div>
                     </div>

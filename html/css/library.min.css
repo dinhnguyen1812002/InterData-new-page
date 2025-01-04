@@ -24431,3 +24431,19 @@ html.menu-open {
   }
 }
 
+.desc-content {
+  overflow: hidden;
+  
+  max-height: 120px; /* Khoảng 4 dòng */
+  transition: max-height 0.3s ease-out;
+}
+
+.desc.expanded .desc-content {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+}
+.btn-read-more {
+  text-align: center;
+  color: #007bff;
+  
+}
