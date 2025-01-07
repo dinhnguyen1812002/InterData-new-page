@@ -17709,10 +17709,6 @@ fieldset:disabled .btn {
     background-size: cover;
 }
 
-.thumb-news {
-    padding-bottom: var(--thumb-res-wide, 58%) !important;
-}
-
 .absolute,
 .banner-lg:after,
 .overlay-dark,
@@ -17726,7 +17722,6 @@ fieldset:disabled .btn {
     right: 0;
     bottom: 0;
     left: 0;
-
 }
 
 .header-right .icon,
@@ -18910,8 +18905,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 
 .slider-logo .thumb-res img {
     padding: 30px;
-    /* filter: brightness(0) saturate(100%) invert(31%) sepia(10%) saturate(1120%)
-    hue-rotate(177deg) brightness(97%) contrast(91%); */
+    filter: brightness(0) saturate(100%) invert(31%) sepia(10%) saturate(1120%) hue-rotate(177deg) brightness(97%) contrast(91%);
 }
 
 .slider-logo .thumb-res::before {
@@ -19677,6 +19671,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
     .slider-history .block .info {
         order: 1;
         width: calc(50% - 2rem);
+        margin-top: 120px;
     }
 
     .slider-history .block .info .desc {
@@ -20346,9 +20341,10 @@ a.absolute {
 }
 
 .kh img {
-    width: 100px;
+    width: 107px;
+    height: 40px;
     /* max-height: 100%; */
-    margin: auto;
+    margin: 0;
 }
 
 .thumb-res iframe {
@@ -27624,7 +27620,7 @@ html.menu-open {
 .home-slider__content .map .card-info {
     display: inline-block;
     background: #fff;
-    box-shadow: 0 5px 12px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 12px 4px rgba(0, 0, 0, .1);
     border-radius: 6px;
     max-width: 200px;
     position: absolute;
@@ -27634,7 +27630,7 @@ html.menu-open {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+    transition: opacity .3s ease 0s, visibility .3s ease 0s
 }
 
 .home-slider__content .map .card-info::after,
@@ -27643,13 +27639,13 @@ html.menu-open {
     position: absolute;
     display: inline-block;
     background: #0060f7;
-    height: 1px;
+    height: 1px
 }
 
 .home-slider__content .map .card-info.show {
     opacity: 1;
     visibility: visible;
-    pointer-events: all;
+    pointer-events: all
 }
 
 .home-slider__content .map .card-info__title {
@@ -27657,18 +27653,18 @@ html.menu-open {
     margin: 0 1rem 12px;
     border-bottom: 1px solid #d0d5dd;
     font-weight: 700;
-    font-size: 0.9375rem;
+    font-size: .9375rem
 }
 
 .home-slider__content .map .card-info__list {
     margin: 0;
     padding: 0 1.25rem 1rem;
-    list-style-type: none;
+    list-style-type: none
 }
 
 .home-slider__content .map .card-info__list .block {
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .home-slider__content .map .card-info__list .block .thumb-logo {
@@ -27676,12 +27672,12 @@ html.menu-open {
     width: 42px;
     height: 42px;
     flex: 0 0 auto;
-    margin-right: 0.75rem;
+    margin-right: .75rem;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
     z-index: 10;
-    border: 2px solid #f2f4f7;
+    border: 2px solid #f2f4f7
 }
 
 .home-slider__content .map .card-info__list .block .thumb-logo img {
@@ -27692,7 +27688,7 @@ html.menu-open {
     left: 0;
     margin: auto;
     max-height: 100%;
-    padding: 4px;
+    padding: 4px
 }
 
 .home-slider__content .map .card-info__list .block .thumb-logo::before {
@@ -27701,7 +27697,7 @@ html.menu-open {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0
 }
 
 .home-slider__content .map .card-info__list .block .info .tt {
@@ -27710,29 +27706,37 @@ html.menu-open {
     color: #1d2939;
     font-weight: 400;
     padding: 0;
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .home-slider__content .map .card-info__list>li+li {
-    margin-top: 12px;
+    margin-top: 12px
 }
 
 .home-slider__content .map .card-info#HanoiStation {
-    top: -74px;
+    top: -74px
 }
 
 .home-slider__content .map .card-info#HanoiStation::before {
     width: 26px;
     right: 102%;
     top: 53px;
-    transform: none;
+    transform: none
 }
 
 .home-slider__content .map .card-info#HanoiStation::after {
     width: 59px;
     right: calc(102% + 15px);
     top: 77px;
-    transform: rotate(-53deg);
+    transform: rotate(-53deg)
+}
+
+
+.home-slider__content .map .card-info#HanoiStation::after {
+    width: 59px;
+    right: calc(102% + 15px);
+    top: 77px;
+    transform: rotate(-53deg)
 }
 
 .home-slider__content .map .card-info#HochiminhStation::before {
@@ -27745,27 +27749,27 @@ html.menu-open {
 .home-slider__content .map .card-info#HochiminhStation::after {
     width: 14px;
     right: 101%;
-    top: 35.5%;
+    top: 39.5%;
     transform: none;
 }
 
 .home-slider__content .map .card-info#SingaporeStation {
     bottom: -60px;
-    top: auto;
+    top: auto
 }
 
 .home-slider__content .map .card-info#SingaporeStation::before {
     width: 39px;
     right: 101%;
     bottom: 144px;
-    transform: none;
+    transform: none
 }
 
 .home-slider__content .map .card-info#SingaporeStation::after {
     width: 78px;
     right: calc(98% + 34px);
     bottom: 116px;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg)
 }
 
 .home-slider__content .map-animation {
@@ -27806,69 +27810,69 @@ html.menu-open {
     animation: scaler 1s linear infinite;
 }
 
-@media (min-width: 576px) {
+@media (min-width:576px) {
     .home-slider-o .svg-animation svg {
-        height: 60%;
+        height: 60%
     }
 
     .home-slider__content .map {
-        max-width: 100%;
+        max-width: 100%
     }
 
     .home-slider__content .map .card-info {
         max-width: 250px;
-        right: 100px;
+        right: 100px
     }
 
     .home-slider__content .map .card-info__title {
-        font-size: 1.125rem;
+        font-size: 1.125rem
     }
 
     .home-slider__content .map .card-info__list .block .info .tt {
-        --tt: 1rem;
+        --tt: 1rem
     }
 
     .home-slider__content .map .card-info#HanoiStation {
-        right: 60px;
+        right: 60px
     }
 
     .home-slider__content .map .card-info#HanoiStation::before {
-        width: 32px;
-        top: 62px;
+        width: 29px;
+        top: 82px
     }
 
     .home-slider__content .map .card-info#HanoiStation::after {
-        width: 94px;
-        top: 92px;
+        width: 67px;
+        top: 102px;
         transform: rotate(-38deg);
-        right: calc(102% + 22px);
+        right: calc(102% + 22px)
     }
 
     .home-slider__content .map .card-info#HochiminhStation {
         top: 70px;
-        right: 45px;
+        right: 45px
     }
 
     .home-slider__content .map .card-info#HochiminhStation::before {
-        width: 102px;
-        top: 51%;
-        right: calc(101% + 17px);
+        width: 117px;
+        top: 61%;
+        /* right: calc(101% + 17px) */
     }
 
     .home-slider__content .map .card-info#HochiminhStation::after {
-        width: 41px;
+        width: 27px
     }
 
     .home-slider__content .map .card-info#SingaporeStation::before {
         width: 35px;
-        bottom: 177px;
+        bottom: 177px
     }
 
     .home-slider__content .map .card-info#SingaporeStation::after {
         width: 102px;
         right: calc(98% + 25px);
         bottom: 140px;
-        transform: rotate(-46deg);
+        transform: rotate(-46deg)
     }
 }
 
@@ -27901,15 +27905,15 @@ html.menu-open {
     }
 
     .home-slider__content .map .card-info#SingaporeStation::after {
-        width: 140px;
+        width: 161px;
         right: calc(98% + 65px);
-        bottom: 123px;
-        transform: rotate(46deg);
+        bottom: 111px;
+        transform: rotate(46deg)
     }
 
     .home-slider__content .map .card-info#SingaporeStation::before {
-        width: 80px;
-        bottom: 72px;
+        width: 84px;
+        bottom: 53px
     }
 
     .home-slider__content .map-animation {
@@ -27981,9 +27985,9 @@ html.menu-open {
     }
 
     .home-slider__content .map .card-info#SingaporeStation::after {
-        width: 126px;
+        width: 143px;
         right: calc(98% + 36px);
-        bottom: 109px;
+        bottom: 96px;
         transform: rotate(36deg);
     }
 }
@@ -28323,6 +28327,7 @@ html.menu-open {
 
 .bg-history {
     background: #101d85;
+    /* background: #171a2e; */
     padding-top: 60px;
     padding-bottom: 60px;
     overflow: hidden;
@@ -28544,7 +28549,7 @@ html.menu-open {
 .bg-map .map .card-info#HochiminhStation::after {
     width: 14px;
     right: 101%;
-    top: 35.5%;
+    top: 48.5%;
     transform: none;
 }
 
@@ -28605,6 +28610,33 @@ html.menu-open {
     animation: scaler 1s linear infinite;
 }
 
+@media (max-width:576px) {
+    .bg-map .map .card-info#HochiminhStation::before {
+        top: 60%;
+    }
+
+    .bg-map .map .card-info#SingaporeStation::after {
+        width: 94px;
+        right: calc(98% + 25px);
+        bottom: 85px;
+        transform: rotate(0deg);
+    }
+
+    .bg-map .map .card-info#SingaporeStation::before {
+        width: 39px;
+        right: 101%;
+        bottom: 85px;
+        transform: none;
+    }
+
+    .bg-map .map .card-info#HanoiStation::after {
+        width: 64px;
+        right: calc(102% + 8px);
+        top: 80px;
+        transform: rotate(-61deg);
+    }
+}
+
 @media (min-width: 576px) {
     .bg-map .map {
         max-width: 100%;
@@ -28628,15 +28660,15 @@ html.menu-open {
     }
 
     .bg-map .map .card-info#HanoiStation::before {
-        width: 32px;
-        top: 62px;
+        /* width: 32px; */
+        top: 63px;
     }
 
     .bg-map .map .card-info#HanoiStation::after {
         width: 94px;
         top: 92px;
         transform: rotate(-38deg);
-        right: calc(102% + 22px);
+        /* right: calc(102% + 22px); */
     }
 
     .bg-map .map .card-info#HochiminhStation {
@@ -28646,7 +28678,7 @@ html.menu-open {
 
     .bg-map .map .card-info#HochiminhStation::before {
         width: 102px;
-        top: 51%;
+        top: 68%;
         right: calc(101% + 17px);
     }
 
@@ -28655,15 +28687,15 @@ html.menu-open {
     }
 
     .bg-map .map .card-info#SingaporeStation::before {
-        width: 35px;
-        bottom: 177px;
+        width: 26px;
+        bottom: 47px;
     }
 
     .bg-map .map .card-info#SingaporeStation::after {
-        width: 102px;
+        width: 116px;
         right: calc(98% + 25px);
-        bottom: 140px;
-        transform: rotate(-46deg);
+        bottom: 70px;
+        transform: rotate(24deg);
     }
 }
 
@@ -28680,13 +28712,13 @@ html.menu-open {
 
     .bg-map .map .card-info#SingaporeStation::after {
         width: 140px;
-        right: calc(98% + 65px);
+        right: calc(98% + 85px);
         bottom: 123px;
         transform: rotate(46deg);
     }
 
     .bg-map .map .card-info#SingaporeStation::before {
-        width: 80px;
+        width: 101px;
         bottom: 72px;
     }
 
@@ -29456,10 +29488,9 @@ html.menu-open {
     }
 }
 
-@media (min-width: 100px) and (max-width:1500px) {
+@media (min-width: 100px) and (max-width: 1500px) {
     .slider-logo .thumb-res img {
         padding: 12px;
-
     }
 }
 
@@ -29479,7 +29510,10 @@ html.menu-open {
 .btn-read-more {
     text-align: center;
     color: #007bff;
+}
 
+.bao {
+    padding-bottom: var(--thumb-res-wide, 58%) !important;
 }
 
 .news-img {
