@@ -15537,8 +15537,8 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 .slider-logo .thumb-res img {
   padding: 30px;
-  /* filter: brightness(0) saturate(100%) invert(31%) sepia(10%) saturate(1120%)
-    hue-rotate(177deg) brightness(97%) contrast(91%); */
+  filter: brightness(0) saturate(100%) invert(31%) sepia(10%) saturate(1120%)
+    hue-rotate(177deg) brightness(97%) contrast(91%);
 }
 .slider-logo .thumb-res::before {
   background: #f9fafb;
@@ -16193,6 +16193,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
   .slider-history .block .info {
     order: 1;
     width: calc(50% - 2rem);
+    margin-top: 120px;
   }
   .slider-history .block .info .desc {
     font-size: 1rem;
@@ -16753,9 +16754,10 @@ a.absolute {
   margin: auto;
 }
 .kh img {
-  width: 100px;
+  width: 107px;
+  height:40px;
   /* max-height: 100%; */
-  margin: auto;
+  margin: 0;
 }
 .thumb-res iframe {
   width: 100% !important;
@@ -23426,6 +23428,7 @@ html.menu-open {
 }
 .bg-history {
   background: #101d85;
+  /* background: #171a2e; */
   padding-top: 60px;
   padding-bottom: 60px;
   overflow: hidden;
@@ -23621,7 +23624,7 @@ html.menu-open {
 .bg-map .map .card-info#HochiminhStation::after {
   width: 14px;
   right: 101%;
-  top: 35.5%;
+  top: 48.5%;
   transform: none;
 }
 .bg-map .map .card-info#SingaporeStation {
@@ -23673,6 +23676,29 @@ html.menu-open {
   transform-origin: center;
   animation: scaler 1s linear infinite;
 }
+@media (max-width:576px) {
+  .bg-map .map .card-info#HochiminhStation::before{
+    top: 60%;
+  }
+  .bg-map .map .card-info#SingaporeStation::after {
+    width: 94px;
+    right: calc(98% + 25px);
+    bottom: 85px;
+    transform: rotate(0deg);
+}
+  .bg-map .map .card-info#SingaporeStation::before {
+    width: 39px;
+    right: 101%;
+    bottom: 85px;
+    transform: none;
+}
+.bg-map .map .card-info#HanoiStation::after {
+  width: 64px;
+  right: calc(102% + 8px);
+  top: 80px;
+  transform: rotate(-61deg);
+}
+}
 @media (min-width: 576px) {
   .bg-map .map {
     max-width: 100%;
@@ -23691,14 +23717,14 @@ html.menu-open {
     right: 60px;
   }
   .bg-map .map .card-info#HanoiStation::before {
-    width: 32px;
-    top: 62px;
+    /* width: 32px; */
+    top: 63px;
   }
   .bg-map .map .card-info#HanoiStation::after {
     width: 94px;
     top: 92px;
     transform: rotate(-38deg);
-    right: calc(102% + 22px);
+    /* right: calc(102% + 22px); */
   }
   .bg-map .map .card-info#HochiminhStation {
     top: 70px;
@@ -23706,21 +23732,21 @@ html.menu-open {
   }
   .bg-map .map .card-info#HochiminhStation::before {
     width: 102px;
-    top: 51%;
+    top: 68%;
     right: calc(101% + 17px);
   }
   .bg-map .map .card-info#HochiminhStation::after {
     width: 41px;
   }
   .bg-map .map .card-info#SingaporeStation::before {
-    width: 35px;
-    bottom: 177px;
+    width: 26px;
+    bottom: 47px;
   }
   .bg-map .map .card-info#SingaporeStation::after {
-    width: 102px;
+    width: 116px;
     right: calc(98% + 25px);
-    bottom: 140px;
-    transform: rotate(-46deg);
+    bottom: 70px;
+    transform: rotate(24deg);
   }
 }
 @media (min-width: 768px) {
@@ -23734,12 +23760,12 @@ html.menu-open {
   }
   .bg-map .map .card-info#SingaporeStation::after {
     width: 140px;
-    right: calc(98% + 65px);
+    right: calc(98% + 85px);
     bottom: 123px;
     transform: rotate(46deg);
   }
   .bg-map .map .card-info#SingaporeStation::before {
-    width: 80px;
+    width: 101px;
     bottom: 72px;
   }
   .bg-map .map-animation {
@@ -24423,17 +24449,15 @@ html.menu-open {
     box-shadow: none;
   }
 }
-@media (max-width: 1200px) {
+@media (min-width: 100px) and (max-width: 1500px) {
   .slider-logo .thumb-res img {
     padding: 12px;
-    /* filter: brightness(0) saturate(100%) invert(31%) sepia(10%) saturate(1120%)
-      hue-rotate(177deg) brightness(97%) contrast(91%); */
   }
 }
 
 .desc-content {
   overflow: hidden;
-  
+
   max-height: 120px; /* Khoảng 4 dòng */
   transition: max-height 0.3s ease-out;
 }
@@ -24445,5 +24469,8 @@ html.menu-open {
 .btn-read-more {
   text-align: center;
   color: #007bff;
-  
+}
+
+.bao {
+  padding-bottom: var(--thumb-res-wide, 58%) !important;
 }
