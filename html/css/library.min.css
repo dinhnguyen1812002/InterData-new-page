@@ -18894,11 +18894,12 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 
 .thumb-res {
-  overflow: hidden;
-  display: block;
-  position: relative;
-  margin-bottom: 10rem;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    margin-bottom: 10rem;
 }
+
 .slider-logo .swiper-wrapper {
     -webkit-transition-timing-function: linear !important;
     -o-transition-timing-function: linear !important;
@@ -19529,7 +19530,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 
 .slider-history .block .info .desc {
-    font-size:1rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -29261,7 +29262,7 @@ html.menu-open {
     padding: 24px 24px 60px;
     background: #f2f4f7;
     border-radius: 20px;
-   
+
 }
 
 .grid-news-item .block .thumb-res {
@@ -29528,7 +29529,3 @@ html.menu-open {
     width: 119px
 }
 
-.news-img-24 {
-    height: 16px;
-    width: 120px
-}
