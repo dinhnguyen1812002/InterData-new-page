@@ -18893,6 +18893,12 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
     --thumb-res-wide-sm: 43%;
 }
 
+.thumb-res {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  margin-bottom: 10rem;
+}
 .slider-logo .swiper-wrapper {
     -webkit-transition-timing-function: linear !important;
     -o-transition-timing-function: linear !important;
@@ -20291,7 +20297,7 @@ a.absolute {
     overflow: hidden;
     display: block;
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: -23px;
 }
 
 .thumb-res.wide-sm {
