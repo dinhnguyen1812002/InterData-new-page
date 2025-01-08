@@ -1,70 +1,52 @@
 // JavaScript to fetch data from WordPress API and populate the section
 (async function populateBlogPosts() {
-    fetch('https://interdata.vn/blog/wp-json/wp/v2/posts?orderby=date&order=desc&_embed')
-    .then((response) => response.json())  // Chuyển đổi dữ liệu trả về thành JSON
-    .then((data) => {
-      const newsContainer = document.getElementById('news-container');
-      
-      // Lặp qua 4 bài viết và chèn vào trong grid-news
-      data.slice(0, 4).forEach((post, index) => {
-        // Tạo phần tử bài viết mới
-        const newsItem = document.createElement('div');
-        newsItem.classList.add('grid-news-item');
-
-        let postContent = `
-          <div class="block">
-            <a class="absolute" alt="" title="" href="${post.link}"></a>
-            <div class="info">
-              <div class="sub-info">
-                <span class="tag">Công nghệ</span>
-                <span class="datetime">${new Date(post.date).toLocaleDateString()}</span>
-              </div>
-              <h2 class="tt">
-                <span>${post.title.rendered}</span>
-              </h2>
-              <div class="desc">${post.excerpt.rendered}</div>
-              <div class="link-more">
-                <span>
-                  Xem thêm <i class="fa fa-long-arrow-right"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        `;
-
-        // Thêm hình ảnh chỉ cho bài viết đầu tiên
-        if (index === 0 && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]) {
-          postContent = `
+    const apiUrl = 'https://interdata.vn/blog/wp-json/wp/v2/posts?_embed&per_page=4&orderby=date&order=desc';
+    const section = document.querySelector('.block-bg .grid-news');
+  
+    try {
+      const response = await fetch(apiUrl);
+      if (!response.ok) throw new Error('Failed to fetch posts');
+  
+      const posts = await response.json();
+  
+      // Clear existing content in the grid-news
+      section.innerHTML = '';
+  
+      posts.forEach((post, index) => {
+        const imageUrl = index === 0 && post._embedded?.['wp:featuredmedia']?.[0]?.source_url ? post._embedded['wp:featuredmedia'][0].source_url : null;
+        const postDate = new Date(post.date).toLocaleDateString('vi-VN');
+        const postCategory = post._embedded?.['wp:term']?.[0]?.[0]?.name || 'Uncategorized';
+  
+        const postHTML = `
+          <div class="grid-news-item">
             <div class="block">
-              <a class="absolute" alt="" title="" href="${post.link}"></a>
-              <div class="thumb-res wide">
-                <img src="${post._embedded['wp:featuredmedia'][0].source_url}" alt="${post.title.rendered}" />
-              </div>
+              <a class="absolute" href="${post.link}" title="${post.title.rendered}"></a>
+              ${imageUrl ? `<div class="thumb-res wide thumb-news">
+                <img src="${imageUrl}" alt="${post.title.rendered}" />
+              </div>` : ''}
               <div class="info">
                 <div class="sub-info">
-                  <span class="tag">Công nghệ</span>
-                  <span class="datetime">${new Date(post.date).toLocaleDateString()}</span>
+                  <span class="tag">${postCategory}</span>
+                  <span class="datetime">${postDate}</span>
                 </div>
-                <h2 class="tt">
+                <h3 class="tt">
                   <span>${post.title.rendered}</span>
-                </h2>
-                <div class="desc">${post.excerpt.rendered}</div>
+                </h3>
+                <div class="desc">
+                  ${post.excerpt.rendered}
+                </div>
                 <div class="link-more">
-                  <span>
-                    Xem thêm <i class="fa fa-long-arrow-right"></i>
-                  </span>
+                  <span>Xem thêm <i class="fa fa-long-arrow-right"></i></span>
                 </div>
               </div>
             </div>
-          `;
-        }
-        
-        newsItem.innerHTML = postContent;
-        // Thêm bài viết vào container
-        newsContainer.appendChild(newsItem);
+          </div>`;
+  
+        section.insertAdjacentHTML('beforeend', postHTML);
       });
-    })
-    .catch((error) => {
+    } catch (error) {
       console.error('Error fetching posts:', error);
-    });
-})();
+      section.innerHTML = '<p>Không thể tải bài viết. Vui lòng thử lại sau.</p>';
+    }
+  })();
+  
