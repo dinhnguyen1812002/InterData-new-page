@@ -33,7 +33,8 @@
                   <span>${post.title.rendered}</span>
                 </h3>
                 <div class="desc">
-                  ${post.excerpt.rendered}
+                  <p> ${post.excerpt.rendered} </p>
+                 
                 </div>
                 <div class="link-more">
                   <span>Xem thêm <i class="fa fa-long-arrow-right"></i></span>
