@@ -19625,13 +19625,17 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 
 .slider-history-thumb .block {
     background: #101d85;
-    padding: 4px 12px;
+
+    padding-top: 4px;
+    padding-bottom: 4px ;
+    height: 35px;
     text-align: center;
     color: #fff;
     border-radius: 8px;
     border: 1px solid #fff;
     cursor: pointer;
     transition: all 350ms ease;
+    
 }
 
 .slider-history-thumb .block:hover {
@@ -19678,7 +19682,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
     .slider-history .block .info {
         order: 1;
         width: calc(50% - 2rem);
-        margin-top: 120px;
     }
 
     .slider-history .block .info .desc {
