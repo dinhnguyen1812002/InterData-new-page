@@ -27819,7 +27819,43 @@ html.menu-open {
     transform-origin: center;
     animation: scaler 1s linear infinite;
 }
+@media (max-width:576px) {
 
+  .home-slider__content .map .card-info#HanoiStation::before {
+      /* //width: 29px; */
+      top: 64px
+  }
+
+  .home-slider__content .map .card-info#HanoiStation::after {
+     
+      top: 88px;
+      right: calc(102% + 11px);
+  }
+
+
+  .home-slider__content .map .card-info#HochiminhStation::before {
+     
+      top: 61%;
+      /* right: calc(101% + 17px) */
+  }
+
+  .home-slider__content .map .card-info#HochiminhStation::after {
+      /* width: 27px */
+      top:110px
+  }
+
+  .home-slider__content .map .card-info#SingaporeStation::before {
+      /* width: 35px; */
+      bottom: 85px
+  }
+
+  .home-slider__content .map .card-info#SingaporeStation::after {
+      width: 102px;
+      right: calc(98% + 25px);
+      bottom: 85px;
+      transform: rotate(0deg)
+  }
+}
 @media (min-width:576px) {
     .home-slider-o .svg-animation svg {
         height: 60%
