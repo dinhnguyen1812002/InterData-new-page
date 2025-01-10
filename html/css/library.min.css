@@ -18912,7 +18912,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 
 .slider-logo .thumb-res img {
     padding: 30px;
-    filter: brightness(0) saturate(100%) invert(31%) sepia(10%) saturate(1120%) hue-rotate(177deg) brightness(97%) contrast(91%);
+    /* filter: brightness(0) saturate(100%) invert(31%) sepia(10%) saturate(1120%) hue-rotate(177deg) brightness(97%) contrast(91%); */
 }
 
 .slider-logo .thumb-res::before {
