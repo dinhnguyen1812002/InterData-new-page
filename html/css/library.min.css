@@ -19615,7 +19615,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 
 .slider-history-thumb .swiper-slide {
-    width: 25%;
+    width: 42%;
 }
 
 .slider-history-thumb .swiper-slide-thumb-active .block {
@@ -27727,7 +27727,7 @@ html.menu-open {
     top: -74px
 }
 
-.home-slider__content .map .card-info#HanoiStation::before {
+/* .home-slider__content .map .card-info#HanoiStation::before {
     width: 26px;
     right: 102%;
     top: 53px;
@@ -27761,14 +27761,15 @@ html.menu-open {
     right: 101%;
     top: 39.5%;
     transform: none;
-}
+} */
 
 .home-slider__content .map .card-info#SingaporeStation {
-    bottom: -60px;
+    bottom: -66px;
+     right: 8px; 
     top: auto
 }
 
-.home-slider__content .map .card-info#SingaporeStation::before {
+/* .home-slider__content .map .card-info#SingaporeStation::before {
     width: 39px;
     right: 101%;
     bottom: 144px;
@@ -27780,7 +27781,7 @@ html.menu-open {
     right: calc(98% + 34px);
     bottom: 116px;
     transform: rotate(-45deg)
-}
+} */
 
 .home-slider__content .map-animation {
     position: relative;
@@ -27805,6 +27806,23 @@ html.menu-open {
     transform-origin: center;
     animation: scaler 1s linear infinite;
 }
+/* Hiệu ứng nháy cho shadow */
+.home-slider__content .map-animation #HanoiStation-shadow,
+.home-slider__content .map-animation #HochiminhStation-shadow,
+.home-slider__content .map-animation #SingaporeStation-shadow {
+    opacity: 0.1;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: scaler 1s linear infinite;
+}
+
+/* Khi shadow đứng im (không có animation) */
+.home-slider__content .map-animation #HanoiStation-shadow.stopped,
+.home-slider__content .map-animation #HochiminhStation-shadow.stopped,
+.home-slider__content .map-animation #SingaporeStation-shadow.stopped {
+    opacity: 1;  /* Hủy opacity thấp */
+    animation: none;  /* Dừng animation */
+}
 
 .home-slider__content .map-animation #HochiminhStation-shadow {
     opacity: 0.1;
@@ -27821,44 +27839,43 @@ html.menu-open {
 }
 @media (max-width:576px) {
 
-  .home-slider__content .map .card-info#HanoiStation::before {
-      /* //width: 29px; */
+  /* .home-slider__content .map .card-info#HanoiStation::before {
+     
       top: 64px;
-      width: 22px;
-  }
+      width: calc(4% + 2px);
+  } */
 
-  .home-slider__content .map .card-info#HanoiStation::after {
+  /* .home-slider__content .map .card-info#HanoiStation::after {
      
     top: 85px;
-    right: calc(102% + 11px);
+    right: calc(102% - 2px);
     width: 52px
   }
 
 
   .home-slider__content .map .card-info#HochiminhStation::before {
      
-      top: 61%;
-      width: 56px;
-        right: calc(101% + 4px);
+      top: 59%;
+      width: calc(31% + -2px);;
+        right: calc(101% + -3px);
   }
 
   .home-slider__content .map .card-info#HochiminhStation::after {
-      /* width: 27px */
-      width: 18px;
-        top: 112px;
+    
+        top: 109px;
   }
 
   .home-slider__content .map .card-info#SingaporeStation::before {
-      /* width: 35px; */
+     
       bottom: 85px
   }
 
   .home-slider__content .map .card-info#SingaporeStation::after {
-      width: 102px;
-      right: calc(98% + 16px);
+      width: calc(44% + -3px);;
+      right: calc(98% + 10px);
       bottom: 85px;
       transform: rotate(0deg)
-  }
+  } */
 }
 @media (min-width:576px) {
     .home-slider-o .svg-animation svg {
@@ -27886,7 +27903,7 @@ html.menu-open {
         right: 60px
     }
 
-    .home-slider__content .map .card-info#HanoiStation::before {
+    /* .home-slider__content .map .card-info#HanoiStation::before {
         width: 29px;
         top: 82px
     }
@@ -27896,17 +27913,19 @@ html.menu-open {
         top: 102px;
         transform: rotate(-38deg);
         right: calc(102% + 22px)
-    }
+    } */
 
     .home-slider__content .map .card-info#HochiminhStation {
         top: 70px;
         right: 45px
     }
-
-    .home-slider__content .map .card-info#HochiminhStation::before {
+    .home-slider__content .map .card-info#SingaporeStation {
+       right:168px;
+        bottom: -1px;
+    }
+    /* .home-slider__content .map .card-info#HochiminhStation::before {
         width: 117px;
         top: 61%;
-        /* right: calc(101% + 17px) */
     }
 
     .home-slider__content .map .card-info#HochiminhStation::after {
@@ -27915,15 +27934,15 @@ html.menu-open {
 
     .home-slider__content .map .card-info#SingaporeStation::before {
         width: 35px;
-        bottom: 177px
+        bottom: 95px
     }
 
     .home-slider__content .map .card-info#SingaporeStation::after {
         width: 102px;
         right: calc(98% + 25px);
-        bottom: 140px;
-        transform: rotate(-46deg)
-    }
+        bottom: 95px;
+        transform: rotate(0deg)
+    } */
 }
 
 @media (min-width: 768px) {
@@ -27953,8 +27972,11 @@ html.menu-open {
         top: 101px;
         right: 130px;
     }
-
-    .home-slider__content .map .card-info#SingaporeStation::after {
+    .home-slider__content .map .card-info#SingaporeStation {
+        right: 212px;
+        bottom: -1px;
+    }
+    /* .home-slider__content .map .card-info#SingaporeStation::after {
         width: 161px;
         right: calc(98% + 65px);
         bottom: 111px;
@@ -27964,7 +27986,7 @@ html.menu-open {
     .home-slider__content .map .card-info#SingaporeStation::before {
         width: 84px;
         bottom: 53px
-    }
+    } */
 
     .home-slider__content .map-animation {
         padding-bottom: 0;
@@ -28000,8 +28022,8 @@ html.menu-open {
     }
 
     .home-slider__content .map .card-info#SingaporeStation {
-        right: -7px;
-        bottom: -20px;
+        right: 111px;
+        bottom: 41px;
     }
 }
 
@@ -28026,11 +28048,11 @@ html.menu-open {
     }
 
     .home-slider__content .map .card-info#SingaporeStation {
-        right: 108px;
-        bottom: -20px;
+        right: 171px;
+        bottom: 26px;
     }
 
-    .home-slider__content .map .card-info#SingaporeStation::before {
+    /* .home-slider__content .map .card-info#SingaporeStation::before {
         width: 43px;
     }
 
@@ -28039,7 +28061,7 @@ html.menu-open {
         right: calc(98% + 36px);
         bottom: 96px;
         transform: rotate(36deg);
-    }
+    } */
 }
 
 @media (min-width: 1400px) {
@@ -28063,8 +28085,8 @@ html.menu-open {
     }
 
     .home-slider__content .map .card-info#SingaporeStation {
-        right: 168px;
-        bottom: -23px;
+        right: 246px;
+        bottom: 20px;
     }
 }
 
@@ -28090,7 +28112,7 @@ html.menu-open {
 
     .home-slider__content .map .card-info#SingaporeStation {
         right: 198px;
-        bottom: -23px;
+        bottom: -1px;
     }
 }
 
@@ -28575,7 +28597,7 @@ html.menu-open {
     top: -74px;
 }
 
-.bg-map .map .card-info#HanoiStation::before {
+/* .bg-map .map .card-info#HanoiStation::before {
     width: 26px;
     right: 102%;
     top: 53px;
@@ -28601,14 +28623,14 @@ html.menu-open {
     right: 101%;
     top: 48.5%;
     transform: none;
-}
+} */
 
 .bg-map .map .card-info#SingaporeStation {
     bottom: -60px;
     top: auto;
 }
 
-.bg-map .map .card-info#SingaporeStation::before {
+/* .bg-map .map .card-info#SingaporeStation::before {
     width: 39px;
     right: 101%;
     bottom: 144px;
@@ -28620,7 +28642,7 @@ html.menu-open {
     right: calc(98% + 34px);
     bottom: 116px;
     transform: rotate(-45deg);
-}
+} */
 
 .bg-map .map-animation {
     position: relative;
@@ -28661,7 +28683,7 @@ html.menu-open {
 }
 
 @media (max-width:576px) {
-    .bg-map .map .card-info#HochiminhStation::before {
+    /* .bg-map .map .card-info#HochiminhStation::before {
         top: 60%;
     }
 
@@ -28684,7 +28706,7 @@ html.menu-open {
         right: calc(102% + 8px);
         top: 80px;
         transform: rotate(-61deg);
-    }
+    } */
 }
 
 @media (min-width: 576px) {
@@ -28709,8 +28731,8 @@ html.menu-open {
         right: 60px;
     }
 
-    .bg-map .map .card-info#HanoiStation::before {
-        /* width: 32px; */
+    /* .bg-map .map .card-info#HanoiStation::before {
+      
         top: 63px;
     }
 
@@ -28718,15 +28740,14 @@ html.menu-open {
         width: 94px;
         top: 92px;
         transform: rotate(-38deg);
-        /* right: calc(102% + 22px); */
-    }
+    } */
 
     .bg-map .map .card-info#HochiminhStation {
         top: 70px;
         right: 45px;
     }
 
-    .bg-map .map .card-info#HochiminhStation::before {
+    /* .bg-map .map .card-info#HochiminhStation::before {
         width: 102px;
         top: 68%;
         right: calc(101% + 17px);
@@ -28746,7 +28767,7 @@ html.menu-open {
         right: calc(98% + 25px);
         bottom: 70px;
         transform: rotate(24deg);
-    }
+    } */
 }
 
 @media (min-width: 768px) {
@@ -28759,8 +28780,12 @@ html.menu-open {
         top: 101px;
         right: 130px;
     }
-
-    .bg-map .map .card-info#SingaporeStation::after {
+    .bg-map .map .card-info#SingaporeStation {
+        bottom: 7px;
+        right: 230px;
+        top: auto;
+    }
+    /* .bg-map .map .card-info#SingaporeStation::after {
         width: 140px;
         right: calc(98% + 85px);
         bottom: 123px;
@@ -28770,7 +28795,7 @@ html.menu-open {
     .bg-map .map .card-info#SingaporeStation::before {
         width: 101px;
         bottom: 72px;
-    }
+    } */
 
     .bg-map .map-animation {
         padding-bottom: 0;
@@ -28803,8 +28828,8 @@ html.menu-open {
     }
 
     .bg-map .map .card-info#SingaporeStation {
-        right: 186px;
-        bottom: -57px;
+        right: 270px;
+        bottom: 2px;
     }
 }
 
@@ -29572,3 +29597,19 @@ html.menu-open {
     width: 119px
 }
 
+
+.shadow-path path {
+    transition: fill 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Màu mặc định */
+  .shadow-path path {
+    fill: #00A2EF;  /* Màu ban đầu */
+  }
+  
+  /* Màu khi active (kích hoạt) */
+  #station1.active .shadow-path path {
+    fill: red; /* Màu khi kích hoạt */
+    opacity: 1; /* Tăng độ rõ ràng */
+  }
+  
