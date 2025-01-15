@@ -28728,7 +28728,7 @@ html.menu-open {
     }
 
     .bg-map .map .card-info#HanoiStation {
-        right: 60px;
+        right: 130px;
     }
 
     /* .bg-map .map .card-info#HanoiStation::before {
@@ -28772,7 +28772,7 @@ html.menu-open {
 
 @media (min-width: 768px) {
     .bg-map .map .card-info#HanoiStation {
-        right: 135px;
+        right: 206px;
         top: 4px;
     }
 
@@ -28818,7 +28818,7 @@ html.menu-open {
     }
 
     .bg-map .map .card-info#HanoiStation {
-        right: 217px;
+        right: 280px;
         top: 5px;
     }
 
