@@ -29626,3 +29626,6 @@ html.menu-open {
     height: auto;
     animation: bounce 2s infinite; 
 }
+mr {
+    margin-right: 5%;
+}
