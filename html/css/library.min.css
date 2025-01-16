@@ -29612,4 +29612,17 @@ html.menu-open {
     fill: red; /* Màu khi kích hoạt */
     opacity: 1; /* Tăng độ rõ ràng */
   }
-  
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.logo1 {
+    width: 350px;
+    height: auto;
+    animation: bounce 2s infinite; 
+}
