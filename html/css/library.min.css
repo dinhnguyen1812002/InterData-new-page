@@ -19013,7 +19013,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 .slider-features__sub .thumb.active {
     width: 340px;
     scale: 1;
-    left: -86px;
+    left: -50px;
     opacity: 1;
     filter: none;
     top:28px;
