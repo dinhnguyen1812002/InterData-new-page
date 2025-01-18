@@ -18987,7 +18987,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 
 .slider-features__sub .thumb {
-    width: 140px;
+    width: 214px;
     opacity: 0.6;
     filter: grayscale(1);
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
