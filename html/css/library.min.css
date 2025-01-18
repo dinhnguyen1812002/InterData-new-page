@@ -19011,9 +19011,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
 }
 
 .slider-features__sub .thumb.active {
-    width: 200px;
+    width: 340px;
     scale: 1;
-    left: -50px;
+    left: -128px;
     opacity: 1;
     filter: none;
 }
@@ -19069,6 +19069,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
     .slider-features__sub {
         max-width: 420px;
         margin: 0 auto;
+    }
+    .slider-features__sub .thumb.active {
+        left: -225px;
     }
 }
 
