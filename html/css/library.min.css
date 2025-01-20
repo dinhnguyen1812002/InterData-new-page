@@ -27787,8 +27787,8 @@ html.menu-open {
 
 .home-slider__content .map-animation {
     position: relative;
-    padding-bottom: 100%;
-    overflow: hidden;
+    padding-bottom: 150%;
+/*     overflow: hidden; */
 }
 
 .home-slider__content .map-animation svg {
