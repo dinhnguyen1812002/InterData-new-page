@@ -27787,7 +27787,7 @@ html.menu-open {
 
 .home-slider__content .map-animation {
     position: relative;
-    padding-bottom: 150%;
+    padding-bottom: 100%;
 /*     overflow: hidden; */
 }
 
@@ -27799,7 +27799,7 @@ html.menu-open {
     left: 0;
     max-width: 100%;
     max-height: 100%;
-    transform: scale(1.7) translateX(15px);
+    transform: scale(1.1) translateX(0px);
 }
 
 .home-slider__content .map-animation #HanoiStation-shadow {
